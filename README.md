@@ -4,11 +4,11 @@
 2. Запуск с помощью команды `gazebo`
 3. Переход в меню Edit -> Building Editor
 
-![Запуск gazebo](ngalacan/images/1.png)
+![Запуск gazebo](ngalacan/images/1.png){width=70%}
 
 4. Черчение 2D-макета, используя инструменты Wall, Window, Door
 
-![2D-макет](ngalacan/images/2.png)
+![2D-макет](ngalacan/images/2.png){width=70%}
 
 5. Сохранение проекта в каталоге `building_editor_models/kolea_kv`
 
@@ -31,7 +31,9 @@
 2. Открытие мира в Ignition Gazebo командой `ign gazebo world.sdf`
 3. Установка в мире элементы интерьера, мебель, пол и источник света
 
-![Стилизация мира](ngalacan/images/3.png)
+![Стилизация мира](ngalacan/images/3.png){width=70%}
+
+![Стилизация мира](ngalacan/images/4.png){width=70%}
 
 4. Сохранение мира под тем же файлом
 
@@ -48,3 +50,5 @@ colcon build --symlink-install
 ```
 ros2 launch turtlebot4_ignition_bringup turtlebot4_ignition.launch.py nav2:=true slam:=false localization:=true rviz:=true
 ```
+
+![Запуск симуляции](ngalacan/images/5.png){width=70%}
