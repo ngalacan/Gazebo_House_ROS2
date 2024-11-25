@@ -1,0 +1,14 @@
+model {
+  file: "model.sdf"
+  file_format {
+    version {
+      major: 1
+      minor: 9
+    }
+    name: "sdf"
+  }
+}
+name: "Gazebo Flag"
+description: "Gazebo Flag"
+version: 1
+
