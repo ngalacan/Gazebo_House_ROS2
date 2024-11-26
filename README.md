@@ -1,4 +1,11 @@
-# Gazebo House ROS2. Этапы выполнения работы
+# Gazebo House ROS2
+## ПО
+
+1. Ubuntu 22.04.5 LTS jammy
+2. ROS2 Humble
+3. Ignition Gazebo Fortress v6.16.0
+4. Gazebo Classic 11.0.0
+
 ## Создание плана квартиры в Gazebo Building Editor
 1. Установка Gazebo Classic 11.0.0 (https://classic.gazebosim.org/download)
 2. Запуск с помощью команды `gazebo`
@@ -10,7 +17,7 @@
 
 ![2D-макет](ngalacan/images/2.png)
 
-5. Сохранение проекта в каталоге `building_editor_models/kolea_kv`
+5. Сохранение проекта в каталоге `house_models`
 
 ## Загрузка квартиры в Ignition Gazebo
 
@@ -29,7 +36,7 @@
 
 ```
 2. Открытие мира в Ignition Gazebo командой `ign gazebo world.sdf`
-3. Установка в мире элементы интерьера, мебель, пол и источник света
+3. Установка в мире элементов интерьера, мебели, пола и источника света
 
 ![Стилизация мира](ngalacan/images/3.png)
 
@@ -46,9 +53,13 @@ git clone https://github.com/turtlebot/turtlebot4.git
 cd ~/turtlebot4_ws
 colcon build --symlink-install
 ```
-2. Запуск симуляции в ROS2
+3. Перемещение файла `world.sdf` в `~/turtlebot4_ws/src/turtlebot4_simulator/turtlebot4_ignition_bringup/worlds`
+
+4. Сборка: `colcon build --symlink-install`
+
+5. Запуск симуляции в ROS2
 ```
-ros2 launch turtlebot4_ignition_bringup turtlebot4_ignition.launch.py nav2:=true slam:=false localization:=true rviz:=true
+ros2 launch turtlebot4_ignition_bringup turtlebot4_ignition.launch.py world:=world
 ```
 
 ![Запуск симуляции](ngalacan/images/5.png)
